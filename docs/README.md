@@ -5,6 +5,6 @@ hogehogehoge
 
 ## アジェンダ
 - [a](./README.md)
-- [b](./index.html)
-- c
+- [b](./fuga)
+- [c](./hoge)
 - d
