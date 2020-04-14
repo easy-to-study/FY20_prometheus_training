@@ -1,10 +1,11 @@
 ---
-name: 自習Task
-about: なんでも
+name: 概要Task
+about: 研修の概要パート
 title: ''
-labels: 自習
+labels: 概要
 assignees: ''
 
 ---
 
-
+## AC
+-
