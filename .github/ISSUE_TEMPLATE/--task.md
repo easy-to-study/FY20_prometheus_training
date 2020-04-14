@@ -1,14 +1,11 @@
 ---
-name: 課題Task
-about: 解決したいなにがし
+name: 実習Task
+about: 研修の実習パート
 title: ''
-labels: 課題
+labels: 実習
 assignees: ''
 
 ---
 
-## 課題
-- 
-
-## ゴール
+## AC
 -
