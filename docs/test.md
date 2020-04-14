@@ -4,7 +4,7 @@
 hogehogehoge
 
 ## アジェンダ
-- [a](./README.md)
+- [a](./README)
 - [b](./index.html)
 - c
 - d
