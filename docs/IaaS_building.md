@@ -54,6 +54,7 @@ Basic A1 // フィルターを解除して選択
 ## パブリック受信ポート
 なし
 ```
+### Smaple
 ![image](https://user-images.githubusercontent.com/49776458/79406677-aec18800-7fd2-11ea-8a63-0a819a191a2d.PNG)
 ## ディスク
 
@@ -65,6 +66,7 @@ Standard HDD
 ## 暗号化の種類
 (既定)プラットフォームで管理されるキーを使用した保存時の暗号化
 ```
+### Smaple
 ![image](https://user-images.githubusercontent.com/49776458/79406682-af5a1e80-7fd2-11ea-842c-b443714ff973.png)
 ## ネットワーク
 
@@ -79,6 +81,7 @@ Subnet01 (20.10.0.0/24)
 ## NIC ネットワーク セキュリティ グループ
 なし
 ```
+### Smaple
 ![image](https://user-images.githubusercontent.com/49776458/79406684-aff2b500-7fd2-11ea-9c86-ff2281228493.png)
 ## 管理
 
@@ -87,7 +90,11 @@ Subnet01 (20.10.0.0/24)
 ## ブート診断
 オフ
 ```
+### Smaple
 ![image](https://user-images.githubusercontent.com/49776458/79406685-b08b4b80-7fd2-11ea-84b2-832a172c8c29.png)
+
+**上記の設定値通り入力されたことを確認し、VMを作成する**
+
 # アクセス
 コマンドプロンプトまたは、PowerShellから以下を実施してください。
 
