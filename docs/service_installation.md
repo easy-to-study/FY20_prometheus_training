@@ -1,15 +1,15 @@
-# ‘O€”õ
+# å‰æº–å‚™
 
-## ƒfƒBƒŒƒNƒgƒŠì¬EˆÚ“®
+## ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªä½œæˆãƒ»ç§»å‹•
 
 ```
 mkdir /usr/local/src/prometheus
 cd /usr/local/src/prometheus
 ```
 
-# Prometheus ‚ÌƒCƒ“ƒXƒg[ƒ‹
+# Prometheus ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 
-## Prometheus ƒ_ƒEƒ“ƒ[ƒhE‰ğ“€
+## å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ã®å–å¾—ãƒ»è§£å‡
 
 ```
 wget https://github.com/prometheus/prometheus/releases/download/v2.17.1/prometheus-2.17.1.linux-amd64.tar.gz
@@ -17,15 +17,15 @@ tar zxvf prometheus-2.17.1.linux-amd64.tar.gz
 mv prometheus-2.17.1.linux-amd64 prometheus-server
 ```
 
-## systemd ƒ†ƒjƒbƒgƒtƒ@ƒCƒ‹‚Ìì¬
+## systemd ãƒ¦ãƒ‹ãƒƒãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã®ä½œæˆ
 
-1. prometheus.service ƒtƒ@ƒCƒ‹‚ğV‹Kì¬E•ÒW‚·‚é
+1. prometheus.service ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ–°è¦ä½œæˆãƒ»ç·¨é›†ã™ã‚‹
 
 ```
 vim /usr/lib/systemd/system/prometheus.service
 ```
 
-2. ˆÈ‰º‚Ì“à—e‚Å•Û‘¶‚·‚é
+2. ä»¥ä¸‹ã®å†…å®¹ã§ä¿å­˜ã™ã‚‹
 
 ```
 [Unit]
@@ -37,14 +37,14 @@ After=network-online.target
 Type=simple
 ExecStart=/usr/local/src/prometheus/prometheus-server/prometheus \
   --config.file=/usr/local/src/prometheus/prometheus-server/prometheus.yml \
-  --web.external-url=http://127.0.0.1/<your-private-ip>/prometheus/ \
+  --web.external-url=http://127.0.0.1/<your_private_ip>/prometheus/ \
   --web.route-prefix=/ \
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-## prometheus.service ‚ğ—LŒø‚É‚µ‚Ä‹N“®
+## prometheus.service ã‚’æœ‰åŠ¹ã«ã—ã¦èµ·å‹•
 
 ```
 systemctl daemon-reload
@@ -52,34 +52,36 @@ systemctl enable prometheus.service
 systemctl start prometheus.service
 ```
 
-## Web UI ‚ÌŠm”F
+## Web UI ã®ç¢ºèª
 
-- ƒuƒ‰ƒEƒU‚©‚çˆÈ‰º‚ÌURL‚ÉƒAƒNƒZƒX‚·‚é
+- ãƒ–ãƒ©ã‚¦ã‚¶ã‹ã‚‰ä»¥ä¸‹ã®URLã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹
 
-http://fy20-springboard.japaneast.cloudapp.azure.com/<your-private-ip>/prometheus/
+```
+http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/prometheus/
+```
 
 ![image](https://user-images.githubusercontent.com/63433549/79302922-985ef200-7f28-11ea-9b36-49a0292133c9.png)
 
-# Grafana ‚ÌƒCƒ“ƒXƒg[ƒ‹
+# Grafana ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 
-## Grafana ‚ÌƒpƒbƒP[ƒWæ“¾EƒCƒ“ƒXƒg[ƒ‹
+## Grafana ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸å–å¾—ãƒ»ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 
 ```
 wget https://dl.grafana.com/oss/release/grafana-6.7.2-1.x86_64.rpm
 sudo yum install grafana-6.7.2-1.x86_64.rpm
 ```
 
-## grafana.ini ‚Ì•ÒW
+## grafana.ini ã®ç·¨é›†
 
-1. grafana.ini ‚ğ•ÒW‚·‚é
+1. grafana.ini ã‚’ç·¨é›†ã™ã‚‹
 
 ```
 vim /etc/grafana/grafana.ini
 ```
 
-1. root_url, serve_from_sub_path ‚ğİ’è‚·‚é
+1. root_url, serve_from_sub_path ã‚’è¨­å®šã™ã‚‹
 
-•ÏX‘O
+å¤‰æ›´å‰
 
 ```
 # The full public facing url you use in browser, used for redirects and emails
@@ -90,28 +92,84 @@ vim /etc/grafana/grafana.ini
 ;serve_from_sub_path = false
 ```
 
-•ÏXŒã
+å¤‰æ›´å¾Œ
 
 ```
 # The full public facing url you use in browser, used for redirects and emails
 # If you use reverse proxy and sub path specify full url (with sub path)
-root_url = %(protocol)s://%(domain)s:%(http_port)s/<your-private-ip>/grafana/
+root_url = %(protocol)s://%(domain)s:%(http_port)s/<your_private_ip>/grafana/
 
 # Serve Grafana from subpath specified in `root_url` setting. By default it is set to `false` for compatibility reasons.
 serve_from_sub_path = true
 ```
 
-## grafana-server.service ‚ğ—LŒø‚É‚µ‚Ä‹N“®
+## grafana-server.service ã‚’æœ‰åŠ¹ã«ã—ã¦èµ·å‹•
 
 ```
 systemctl enable grafana-server.service
 systemctl start grafana-server.service
 ```
 
-## Web UI ‚ÌŠm”F
+## Web UI ã®ç¢ºèª
 
-- ƒuƒ‰ƒEƒU‚©‚çˆÈ‰º‚ÌURL‚ÉƒAƒNƒZƒX‚·‚é
+- ãƒ–ãƒ©ã‚¦ã‚¶ã‹ã‚‰ä»¥ä¸‹ã®URLã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹
 
-http://fy20-springboard.japaneast.cloudapp.azure.com/<your-private-ip>/grafana/
+```
+http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/grafana/
+```
 
 ![image](https://user-images.githubusercontent.com/63433549/79311201-09f26c80-7f38-11ea-81e2-e2fe6028ce2a.png)
+
+# AlertManager ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+
+## å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ã®å–å¾—ãƒ»è§£å‡
+
+```
+wget https://github.com/prometheus/alertmanager/releases/download/v0.20.0/alertmanager-0.20.0.linux-amd64.tar.gz
+tar xzvf alertmanager-0.20.0.linux-amd64.tar.gz
+mv alertmanager-0.20.0.linux-amd64 alertmanager-server
+```
+
+## systemd ãƒ¦ãƒ‹ãƒƒãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã®ä½œæˆ
+
+1. alertmanager.service ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ–°è¦ä½œæˆãƒ»ç·¨é›†ã™ã‚‹
+
+```
+vim /usr/lib/systemd/system/alertmanager.service
+```
+
+2. ä»¥ä¸‹ã®å†…å®¹ã§ä¿å­˜ã™ã‚‹
+
+```
+[Unit]
+Description=AlertManager
+
+[Service]
+Type=simple
+ExecStart=/usr/local/src/prometheus/alertmanager-server/alertmanager \
+  --config.file=/usr/local/src/prometheus/alertmanager-server/alertmanager.yml \
+  --cluster.advertise-address 127.0.0.1:9093 \
+  --web.external-url=http://127.0.0.1/<your_private_ip>/alertmanager/ \
+  --web.route-prefix=/ \
+
+[Install]
+WantedBy=default.target
+```
+
+## alertmanager.service ã‚’æœ‰åŠ¹ã«ã—ã¦èµ·å‹•
+
+```
+systemctl daemon-reload
+systemctl enable alertmanager.service
+systemctl start alertmanager.service
+```
+
+## Web UI ã®ç¢ºèª
+
+- ãƒ–ãƒ©ã‚¦ã‚¶ã‹ã‚‰ä»¥ä¸‹ã®URLã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹
+
+```
+http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/alertmanager/
+```
+
+![image](https://user-images.githubusercontent.com/63433549/79322134-5b562800-7f47-11ea-8154-36d3aaac0ff8.png)
