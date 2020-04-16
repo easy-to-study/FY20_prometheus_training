@@ -1,6 +1,6 @@
 # 現在の Targets を確認
 
-1. Web UI より Status → Targets と選択して現在の Targets を確認する
+- Web UI より Status → Targets と選択して現在の Targets を確認する
 
     デフォルトでは `http://localhost:9090/metrics` エンドポイントが設定されている
     ![image](https://user-images.githubusercontent.com/63433549/79405722-2510bb00-7fd0-11ea-8e1e-004415e7a81e.png)
