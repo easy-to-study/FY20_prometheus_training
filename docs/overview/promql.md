@@ -42,25 +42,40 @@
 
 PrometheusのClientライブラリは4つの主なタイプのメトリクスをサポートします。
 
-<!-- テーブルにする -->
-
 | 種類        | 説明                                                                     | 例   |
 | --------- | ---------------------------------------------------------------------- | --- |
-| Counter   | 累積的なメトリクスでは、そのメトリクスが累積されるか、または0にリセットされます。例えば、 |一つのHTTPにエラーが出た回数をカウントします。     |
-| Gauge     | メモリ使用率など、時間に依存しない、任意に変更するメトリクスに使えます。                                |     |
-| Histogram | 主にはある範囲内の時間におけるデータ・サンプルの表示に使い、ヒストグラム(柱状グラフ)の形が想像できます。                  |     |
-| Summary   | Histogramに似て、ある範囲内の時間におけるデータ・サンプルのサマリーを表示します。                          |     |
+| Counter   | 累積的なメトリクスでは、そのメトリクスが累積されるか、または0にリセットされます。 | - リクエスト数 </br> - リクエストのエラー数     |
+| Gauge     | 時間に依存しない、任意に変更するメトリクスに使えます。                                | - メモリ使用量 </br> - CPU使用量    |
+| Histogram | ある範囲内の時間におけるデータのサンプリングを行い、設定可能な単位毎にカウントする     |hoge|
+| Summary   | Histogramと似ており、違いはカウント結果の合計をを同時に提供する  |huga|
+
+<!-- Histogramは事前に統計値の集合が予期できる場合に各統計値の出現回数を数えるといった用途に向いている -->
+<!-- Summaryは中央値や最大値/最小値といった分布に関するデータを扱いたい場合に向いている -->
 
 ## promQLでできること
 
-- データを参照する
-  - TBD
-- データを計算する
-  - TBD
-- データを集計する
-  - TBD
+監視対象のメモリ関連のメトリクスを例に確認していきます。
 
-チュートリアルで触ってもらうときに色々試してみてくださいね！
+- データを参照する
+  - ラベル指定 
+    - `node_filesystem_free_bytes{device="/dev/sda2"}`
+  - 曖昧検索
+    - `node_filesystem_free_bytes{device=~"^/.*/sda[0-9]"}`
+- データを計算する
+  - 四則演算
+    - `node_filesystem_avail_bytes{device="/dev/sda2"} + node_filesystem_free_bytes{device="/dev/sda2"}`
+    - `ceil(node_filesystem_free_bytes{device="/dev/sda2"} / 1024 /1024)`
+- データを集計する
+  - 最大/最小値
+    - `max(node_filesystem_free_bytes)`
+    - `min(node_filesystem_free_bytes)`
+  - 合計/平均
+    - `sum(node_filesystem_free_bytes)`
+    - `avg(node_filesystem_free_bytes)`
+  - グルーピング
+    - `max(node_filesystem_free_bytes) by ( mountpoint, fstype)`
+
+チュートリアルで触ってもらうときに色々試してみてください！
 
 ---
 
