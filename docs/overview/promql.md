@@ -13,39 +13,30 @@
 動的に検出したい場合は、以下公式より環境にあったものを選ぶ形となります。
 [Configuration | Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
 
-## サンプルデータの確認
+## データの確認
 
 - PrometheusのUIからクエリを実行できます
 - メトリクス名に一部でもヒットするとサジェストで表示されます
 - Executeボタンをクリックすると、[console],[graph]タブからデータを確認できます。
-
-<!-- 図入れる -->
+![image](https://user-images.githubusercontent.com/24913906/79416016-a9236c80-7fe9-11ea-84db-5712b583a29b.png)
 
 ## データ構造
 
 メトリクス名とラベル（key/valueペア）で構成され、それぞれのラベルは異なる時系列を表します。
-モデルに関する情報は以下の通りです
 
-<!-- リストにする -->
-
-- Metrics Name
-
-名称は通常、メトリクスの機能を表す。
-例えば、 `http_requests_total` はHTTPリクエストの総数を表します。
+- メトリクス名
+  - 名称は通常、メトリクスの機能を表す。
+  - 例えば、 `node_filesystem_free_bytes`
+    - ファイルシステム毎の空きディスク容量を表します。
 
 - ラベル
+  - 同じ時系列の異なる次元を識別するために使われます。
+  - 例えば、`node_filesystem_free_bytes{device="/dev/sda2”}`
+    - ファイルシステム`/dev/sda2`の空きディスク容量を表します。
 
-同じ時系列の異なる次元を識別するために使われます。
-例えば、`http_request_total{method=”Get”}` はHTTPがGetしたリクエストの総数を表します。
-よって、method=”Post”の時には、また別の新しいメトリクスになります。
+メトリクスを決めてデータを取得するイメージする際には横軸・縦軸の理解が重要になります。
 
-メトリクスを決めてデータをイメージする際は
-
-縦 の広がり: 同じメトリクス/同じ時間だが ラベルの違うもの
-横 の広がり: 同じメトリクス/同じラベルだが 時間の違うもの
-の感覚が重要になります。
-
-<!-- 図をいれる -->
+![image](https://user-images.githubusercontent.com/24913906/79417255-73cc4e00-7fec-11ea-9401-7f4e643a35ad.png)
 
 ## メトリクスのタイプ
 
