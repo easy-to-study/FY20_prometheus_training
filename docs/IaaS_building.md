@@ -3,10 +3,10 @@
 https://portal.azure.com
 
 2. VirtualMachinesを選択
-![image](https://user-images.githubusercontent.com/49776458/79406672-aa956a80-7fd2-11ea-9b45-408161702466.png)
+![image](https://user-images.githubusercontent.com/49776559/79426180-b9454700-7ffd-11ea-907e-a1af6bb86413.png)
 
 3. 追加を選択
-![image](https://user-images.githubusercontent.com/49776458/79406674-abc69780-7fd2-11ea-88bc-928d1a9a84fd.png)
+![image](https://user-images.githubusercontent.com/49776559/79426184-ba767400-7ffd-11ea-80db-c8bd0057fd8b.png)
 
 # パラメータの指定
 以下の設定値は、確認が必要なパラメータのみ記載しています。  
