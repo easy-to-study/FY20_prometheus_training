@@ -16,9 +16,11 @@
 | zabbix     | 7000    | 7700    |
 | nagios     | 5000    | 5900    |
 
-- 他に思いついたら記載する
+- 大企業でガンガン採用されている
+  - [Cookpad and Prometheus - YouTube](https://www.youtube.com/watch?v=Ik1pvqVTC0w)
+  - [Yahoo!JAPAN データセンターネットワークでPrometheus活用事例 - YouTube](https://www.youtube.com/watch?v=cCQO6KCvUzA)
 
-<!-- CNCF、OSSの話を盛り込むか悩み中 -->
+- オープンソースなので無料で利用できる
 
 ## 専門用語
 
