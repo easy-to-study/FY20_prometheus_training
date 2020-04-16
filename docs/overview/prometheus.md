@@ -105,3 +105,7 @@ Prometheus は複数のコンポーネントで構成されています。
 6. 通知を確認
 
 ![image](https://user-images.githubusercontent.com/24913906/79315702-4923bc00-7f3e-11ea-8bf7-10d2cb2ab833.png)
+
+---
+
+<p style="text-align:center"> <a href="http://hoge"><- 前へ </a> | <a href="http://hoge"> Top </a> |<a href="http://hoge">次へ-> </a></p>

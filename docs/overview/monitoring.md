@@ -33,3 +33,7 @@ Pull 型アプローチでは、監視サーバ上に監視対象についての
 
 Prometheusでは、pull型のデメリットの部分（監視を行うサーバが増えた際に監視サーバの設定変更が必要）をService Discoveryという、サーバを自動で検知してくれる仕組みが補ってくれているためPull型のデメリットである
 部分を払拭しているといえます。
+
+---
+
+<p style="text-align:center"> <a href="http://hoge"><- 前へ </a> | <a href="http://hoge"> Top </a> |<a href="http://hoge">次へ-> </a></p>
