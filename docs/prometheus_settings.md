@@ -16,21 +16,33 @@
     - 変更前
 
         ```
-        # metrics_path defaults to '/metrics'
-        # scheme defaults to 'http'.
+        # A scrape configuration containing exactly one endpoint to scrape:
+        # Here it's Prometheus itself.
+        scrape_configs:
+          # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+          - job_name: 'prometheus'
 
-        static_configs:
-        - targets: ['localhost:9090']
+            # metrics_path defaults to '/metrics'
+            # scheme defaults to 'http'.
+
+            static_configs:
+            - targets: ['localhost:9090']
         ```
 
     - 変更後
 
         ```
-        # metrics_path defaults to '/metrics'
-        # scheme defaults to 'http'.
+        # A scrape configuration containing exactly one endpoint to scrape:
+        # Here it's Prometheus itself.
+        scrape_configs:
+          # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+          - job_name: 'prometheus'
 
-        static_configs:
-        - targets: ['<node_exporter_ip>:9100']
+            # metrics_path defaults to '/metrics'
+            # scheme defaults to 'http'.
+
+            static_configs:
+            - targets: ['<node_exporter_ip>:9100']
         ```
 
 2. Prometheus を再起動
