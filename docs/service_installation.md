@@ -21,28 +21,28 @@ mv prometheus-2.17.1.linux-amd64 prometheus-server
 
 1. prometheus.service ファイルを新規作成・編集する
 
-```
-vim /usr/lib/systemd/system/prometheus.service
-```
+    ```
+    vim /usr/lib/systemd/system/prometheus.service
+    ```
 
 2. 以下の内容で保存する
 
-```
-[Unit]
-Description=Prometheus - Monitoring system and time series database
-Documentation=https://prometheus.io/docs/introduction/overview/
-After=network-online.target
+    ```
+    [Unit]
+    Description=Prometheus - Monitoring system and time series database
+    Documentation=https://prometheus.io/docs/introduction/overview/
+    After=network-online.target
 
-[Service]
-Type=simple
-ExecStart=/usr/local/src/prometheus/prometheus-server/prometheus \
-  --config.file=/usr/local/src/prometheus/prometheus-server/prometheus.yml \
-  --web.external-url=http://127.0.0.1/<your_private_ip>/prometheus/ \
-  --web.route-prefix=/ \
+    [Service]
+    Type=simple
+    ExecStart=/usr/local/src/prometheus/prometheus-server/prometheus \
+      --config.file=/usr/local/src/prometheus/prometheus-server/prometheus.yml \
+      --web.external-url=http://127.0.0.1/<your_private_ip>/prometheus/ \
+      --web.route-prefix=/ \
 
-[Install]
-WantedBy=multi-user.target
-```
+    [Install]
+    WantedBy=multi-user.target
+    ```
 
 ## prometheus.service を有効にして起動
 
@@ -56,11 +56,11 @@ systemctl start prometheus.service
 
 - ブラウザから以下のURLにアクセスする
 
-```
-http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/prometheus/
-```
+    ```
+    http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/prometheus/
+    ```
 
-![image](https://user-images.githubusercontent.com/63433549/79302922-985ef200-7f28-11ea-9b36-49a0292133c9.png)
+    ![image](https://user-images.githubusercontent.com/63433549/79302922-985ef200-7f28-11ea-9b36-49a0292133c9.png)
 
 # Grafana のインストール
 
@@ -75,33 +75,33 @@ sudo yum install grafana-6.7.2-1.x86_64.rpm
 
 1. grafana.ini を編集する
 
-```
-vim /etc/grafana/grafana.ini
-```
+    ```
+    vim /etc/grafana/grafana.ini
+    ```
 
-1. root_url, serve_from_sub_path を設定する
+2. root_url, serve_from_sub_path を設定する
 
-変更前
+    - 変更前
 
-```
-# The full public facing url you use in browser, used for redirects and emails
-# If you use reverse proxy and sub path specify full url (with sub path)
-;root_url = %(protocol)s://%(domain)s:%(http_port)s/
+        ```
+        # The full public facing url you use in browser, used for redirects and emails
+        # If you use reverse proxy and sub path specify full url (with sub path)
+        ;root_url = %(protocol)s://%(domain)s:%(http_port)s/
 
-# Serve Grafana from subpath specified in `root_url` setting. By default it is set to `false` for compatibility reasons.
-;serve_from_sub_path = false
-```
+        # Serve Grafana from subpath specified in `root_url` setting. By default it is set to `false` for compatibility reasons.
+        ;serve_from_sub_path = false
+        ```
 
-変更後
+    - 変更後
 
-```
-# The full public facing url you use in browser, used for redirects and emails
-# If you use reverse proxy and sub path specify full url (with sub path)
-root_url = %(protocol)s://%(domain)s:%(http_port)s/<your_private_ip>/grafana/
+        ```
+        # The full public facing url you use in browser, used for redirects and emails
+        # If you use reverse proxy and sub path specify full url (with sub path)
+        root_url = %(protocol)s://%(domain)s:%(http_port)s/<your_private_ip>/grafana/
 
-# Serve Grafana from subpath specified in `root_url` setting. By default it is set to `false` for compatibility reasons.
-serve_from_sub_path = true
-```
+        # Serve Grafana from subpath specified in `root_url` setting. By default it is set to `false` for compatibility reasons.
+        serve_from_sub_path = true
+        ```
 
 ## grafana-server.service を有効にして起動
 
@@ -114,11 +114,11 @@ systemctl start grafana-server.service
 
 - ブラウザから以下のURLにアクセスする
 
-```
-http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/grafana/
-```
+    ```
+    http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/grafana/
+    ```
 
-![image](https://user-images.githubusercontent.com/63433549/79311201-09f26c80-7f38-11ea-81e2-e2fe6028ce2a.png)
+    ![image](https://user-images.githubusercontent.com/63433549/79311201-09f26c80-7f38-11ea-81e2-e2fe6028ce2a.png)
 
 # AlertManager のインストール
 
@@ -134,27 +134,27 @@ mv alertmanager-0.20.0.linux-amd64 alertmanager-server
 
 1. alertmanager.service ファイルを新規作成・編集する
 
-```
-vim /usr/lib/systemd/system/alertmanager.service
-```
+    ```
+    vim /usr/lib/systemd/system/alertmanager.service
+    ```
 
 2. 以下の内容で保存する
 
-```
-[Unit]
-Description=AlertManager
+    ```
+    [Unit]
+    Description=AlertManager
 
-[Service]
-Type=simple
-ExecStart=/usr/local/src/prometheus/alertmanager-server/alertmanager \
-  --config.file=/usr/local/src/prometheus/alertmanager-server/alertmanager.yml \
-  --cluster.advertise-address 127.0.0.1:9093 \
-  --web.external-url=http://127.0.0.1/<your_private_ip>/alertmanager/ \
-  --web.route-prefix=/ \
+    [Service]
+    Type=simple
+    ExecStart=/usr/local/src/prometheus/alertmanager-server/alertmanager \
+      --config.file=/usr/local/src/prometheus/alertmanager-server/alertmanager.yml \
+      --cluster.advertise-address 127.0.0.1:9093 \
+      --web.external-url=http://127.0.0.1/<your_private_ip>/alertmanager/ \
+      --web.route-prefix=/ \
 
-[Install]
-WantedBy=default.target
-```
+      [Install]
+      WantedBy=default.target
+      ```
 
 ## alertmanager.service を有効にして起動
 
@@ -168,8 +168,8 @@ systemctl start alertmanager.service
 
 - ブラウザから以下のURLにアクセスする
 
-```
-http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/alertmanager/
-```
+    ```
+    http://fy20-springboard.japaneast.cloudapp.azure.com/<your_private_ip>/alertmanager/
+    ```
 
-![image](https://user-images.githubusercontent.com/63433549/79322134-5b562800-7f47-11ea-8154-36d3aaac0ff8.png)
+    ![image](https://user-images.githubusercontent.com/63433549/79322134-5b562800-7f47-11ea-8154-36d3aaac0ff8.png)
