@@ -139,3 +139,7 @@ sudo -i
 ## パスワード
 <user_password> // 別途共有
 ```
+
+---
+
+<p style="text-align:center"> <a href="../overview/promql"><- 前へ </a> | <a href="../"> Top </a> |<a href="./service_installation">次へ-> </a></p>
