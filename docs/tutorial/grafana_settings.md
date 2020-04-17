@@ -188,7 +188,7 @@
         1. 以下のコマンドを実行する (数値は適宜変更すること)
 
             ```
-            /dev/null < $(tail -c 1200M -f /dev/zero)
+            /dev/null < $(tail -c 1300M -f /dev/zero)
             ```
 
         2. デモが終わったら `ctrl + c` で抜けて tail を kill しておく
