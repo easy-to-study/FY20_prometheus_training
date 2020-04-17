@@ -8,6 +8,12 @@
 
 ## Prometheusのすごみ
 
+- オープンソースで無料、すごい
+- 大企業でガンガン採用されている、すごい
+  - [Cookpad and Prometheus - YouTube](https://www.youtube.com/watch?v=Ik1pvqVTC0w)
+  - [Yahoo!JAPAN データセンターネットワークでPrometheus活用事例 - YouTube](https://www.youtube.com/watch?v=cCQO6KCvUzA)
+- 書籍がわかりやすい、すごい
+  - [O'Reilly Japan - 入門 Prometheus](https://www.oreilly.co.jp/books/9784873118772/)
 - Twitterのフォロワー数・伸びがすごい
 
 |            | 2019/06 | 2020/04 |
@@ -16,11 +22,7 @@
 | zabbix     | 7000    | 7700    |
 | nagios     | 5000    | 5900    |
 
-- 大企業でガンガン採用されている
-  - [Cookpad and Prometheus - YouTube](https://www.youtube.com/watch?v=Ik1pvqVTC0w)
-  - [Yahoo!JAPAN データセンターネットワークでPrometheus活用事例 - YouTube](https://www.youtube.com/watch?v=cCQO6KCvUzA)
-
-- オープンソースなので無料で利用できる
+- [プロダクショングレードのコンテナ管理基盤 - Kubernetes](https://kubernetes.io/ja/)に対応できてすごい
 
 ## 専門用語
 
@@ -87,11 +89,12 @@ Prometheus は複数のコンポーネントで構成されています。
 
 ### grafana
 
-- ログ・データ可視化のためのツールで、Prometheus で取得したデータをカッコよく可視化するために利用されます。
+- ログ・データ可視化のためのツールで、Prometheus で取得したデータをカッコよく可視化する(ダッシュボード)ために利用されます。
 
 ### Alertmanager
 
 - Prometheus Server からのアラート・イベントを受け取り、定義された通知設定 (例えばE-mail、slack 等) に基づいてアラートを送信します。
+- ミュート・グルーピング機能を用いることでアラート件数を減らすことも可能
 
 ### Service discovery
 
@@ -119,6 +122,15 @@ Prometheus は複数のコンポーネントで構成されています。
 6. 通知を確認
 
 ![image](https://user-images.githubusercontent.com/24913906/79315702-4923bc00-7f3e-11ea-8bf7-10d2cb2ab833.png)
+
+## まとめ
+
+Promehteusについて雰囲気はつかめましたでしょうか？
+
+エコシステムなアーキテクチャ、時系列データ/クエリを用いた柔軟な監視設定・ダッシュボードや  
+アラート数を抑制できるなど、多くのすばらしい機能があります。  
+
+つづいては、データの取得方法について学んでいきましょう！
 
 ---
 
