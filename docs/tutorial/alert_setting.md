@@ -6,7 +6,7 @@
     http://<jump_domain>/<your_private_ip>/prometheus/alerts
     ```
 
-2. デフォルトではアラートが設定されていないことを確認
+2. デフォルトではアラートが設定されてないことを確認
 ![image](https://user-images.githubusercontent.com/49776559/79524799-61115200-809c-11ea-8474-4d23d37cb5bd.png)
 
 # Alerts を設定する
@@ -181,7 +181,7 @@
 
         ![image](https://user-images.githubusercontent.com/49776559/79524802-62427f00-809c-11ea-93ca-a670a5687815.png)
 
-2. Web UI より Alerts を選択して、アラートのステータス変化を確認する
+2. Outlookを起動して、メールを着信できたことを確認する
 
     - メール通知
     
