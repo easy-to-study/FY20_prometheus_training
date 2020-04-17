@@ -1,9 +1,13 @@
 # 現在の Alerts を確認
 
-- Web UI より Alerts を選択して、現在のアラートを確認する
+1. ブラウザから以下のURLにアクセスする
 
-    デフォルトではアラートが設定されていない
-    ![image](https://user-images.githubusercontent.com/49776559/79524799-61115200-809c-11ea-8474-4d23d37cb5bd.png)
+    ```
+    http://<jump_domain>/<your_private_ip>/prometheus/alerts
+    ```
+
+2. デフォルトではアラートが設定されていないことを確認
+![image](https://user-images.githubusercontent.com/49776559/79524799-61115200-809c-11ea-8474-4d23d37cb5bd.png)
 
 # Alerts を設定する
 
@@ -44,7 +48,7 @@
           - "alert_rules.yml"
         ```
 
-2. alert_rules.yml の編集
+2. alert_rules.yml の作成
 
     ```
     vim /usr/local/src/prometheus/prometheus-server/alert_rules.yml
