@@ -79,4 +79,4 @@ PrometheusのClientライブラリは4つの主なタイプのメトリクスを
 
 ---
 
-<p style="text-align:center"> <a href="http://hoge"><- 前へ </a> | <a href="http://hoge"> Top </a> |<a href="http://hoge">次へ-> </a></p>
+<p style="text-align:center"> <a href="./prometheus"><- 前へ </a> | <a href="../"> Top </a> |<a href="../tutorial/IaaS_building">次へ-> </a></p>

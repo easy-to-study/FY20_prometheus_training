@@ -84,3 +84,7 @@
 # Appendix
 
 [Querying basics \| Prometheus](https://prometheus.io/docs/prometheus/latest/querying/basics/)
+
+---
+
+<p style="text-align:center"> <a href="./service_installation"><- 前へ </a> | <a href="../"> Top </a> |<a href="./grafana_settings">次へ-> </a></p>

@@ -173,3 +173,7 @@ systemctl start alertmanager.service
     ```
 
     ![image](https://user-images.githubusercontent.com/63433549/79322134-5b562800-7f47-11ea-8154-36d3aaac0ff8.png)
+
+---
+
+<p style="text-align:center"> <a href="./IaaS_building"><- 前へ </a> | <a href="../"> Top </a> |<a href="./prometheus_settings">次へ-> </a></p>

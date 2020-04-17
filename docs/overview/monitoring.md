@@ -36,4 +36,4 @@ Prometheusでは、pull型のデメリットの部分（監視を行うサーバ
 
 ---
 
-<p style="text-align:center"> <a href="../"><- 前へ </a> | <a href="../../"> Top </a> |<a href="./prometheus">次へ-> </a></p>
+<p style="text-align:center"> <a href="../overview"><- 前へ </a> | <a href="../"> Top </a> |<a href="./prometheus">次へ-> </a></p>
