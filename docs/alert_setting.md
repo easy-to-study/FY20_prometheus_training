@@ -1,6 +1,6 @@
 # 現在の Alerts を確認
 
-- Web UI より Alerts を選択して現在の Alerts を確認する
+- Web UI より Alerts を選択して、現在のアラートを確認する
 
     デフォルトではアラートが設定されていない
     ![image](https://user-images.githubusercontent.com/63433549/79405722-2510bb00-7fd0-11ea-8e1e-004415e7a81e.png)
@@ -37,7 +37,7 @@
           alertmanagers:
           - static_configs:
             - targets:
-              - alertmanager:9093
+              - localhost:9093
         
         # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
         rule_files:
@@ -99,7 +99,7 @@
     systemctl restart prometheus.service
     ```
 
-4. Web UI より Targets が変更されていることを確認
+4. Web UI より Alerts を選択して、現在のアラートを確認する
 
     ![image](https://user-images.githubusercontent.com/63433549/79409883-f26bc000-7fd9-11ea-9aff-58ebc7f665a2.png)
 
@@ -142,8 +142,8 @@
         global:
           smtp_smarthost: 'smtp.sendgrid.net:587'
           smtp_from: 'alertmanager@tech.softbank.co.jp'
-          smtp_auth_username: 'apikey'
-          smtp_auth_password: 'SG.R1spG2zSQDWbi4NZwZmVyA.4ZGHswzipG1Gd6OGvO2Hn9w00a22BA1PZCAZCAPfhhc'
+          smtp_auth_username: '<smtp_auth_username>'
+          smtp_auth_password: '<smtp_auth_password>'
         
         
         route:
@@ -156,7 +156,7 @@
         receivers:
          - name: 'mail'
            email_configs:
-           - to: '<送信先メールアドレス>'
+           - to: '<alias>@tech.softbank.co.jp'
         ```
 
 2. alertmanager を再起動
@@ -165,31 +165,9 @@
     systemctl restart alertmanager.service
     ```
 
-3. Web UI より Targets が変更されていることを確認
+# アラート確認
 
-    ![image](https://user-images.githubusercontent.com/63433549/79409883-f26bc000-7fd9-11ea-9aff-58ebc7f665a2.png)
-
-# Prom QL の実行
-
-- Web UI より Graph を選択して任意の Prom QL を実行する
-
-    - CPU 使用率
-
-        ```
-        100 - (avg(irate(node_cpu_seconds_total{mode="idle"}[30m])) * 100)
-        ```
-
-    - Memory 使用率
-
-        ```
-        (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes
-        ```
-
-    - Disk 空き容量
-
-        ```
-        node_filesystem_free_bytes{fstype=~"ext4|xfs"}
-        ```
+1. Web UI より Alerts を選択して、アラートのステータス変化を確認する
 
     - 実行イメージ
 
