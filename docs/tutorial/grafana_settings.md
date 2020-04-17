@@ -135,8 +135,58 @@
 
 4. インポート完了
 
-    テンプレートをインポートしてからカスタマイズすることもできる
+    ここからさらにカスタマイズすることもできる
     ![image](https://user-images.githubusercontent.com/63433549/79524843-78503f80-809c-11ea-96cb-b888250c6ca6.png)
+
+# 監視デモ
+
+- 事前に ローカル → 踏み台サーバ → node_exporter を配置したサーバの順番で ssh しておく
+
+    ```
+    ssh <jump_user_name>@<jump_private_ip>
+    ssh <node_exporter_user_name>@<node_exporter_private_ip>
+    ```
+
+- 実際にダッシュボードが変化する様子を確認
+
+    -  CPU に負荷をかけてみる
+
+        1. 以下のコマンドを実行する
+
+            ```
+            yes > /dev/null
+            ```
+
+        2. デモが終わったら `ctrl + c` で抜ける
+
+    - Disk の空き容量を減らしてみる
+
+        1. ダミーファイルを作成する (数値は適宜変更すること)
+
+            ```
+            fallocate -l 25GiB dummy_file
+            ```
+
+        2. デモが終わったらダミーファイルを削除しておく
+
+            ```
+            rm dummy_file
+            ```
+
+    - Memory に負荷をかけてみる
+
+        1. 以下のコマンドを実行する (数値は適宜変更すること)
+
+            ```
+            /dev/null < $(tail -c 1200M -f /dev/zero)
+            ```
+
+        2. デモが終わったら `ctrl + c` で抜けて tail を kill しておく
+
+            ```
+            ps -ef | grep tail
+            kill <PID>
+            ```
 
 # Appendix
 
