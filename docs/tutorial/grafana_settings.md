@@ -218,4 +218,4 @@ Grafana 公式: [Grafana: The open observability platform \| Grafana Labs](https
 
 ---
 
-<p style="text-align:center"> <a href="./prometheus_settings."><- 前へ </a> | <a href="../"> Top </a> |<a href="./alert_setting">次へ-> </a></p>
+<p style="text-align:center"> <a href="./prometheus_settings"><- 前へ </a> | <a href="../"> Top </a> |<a href="./alert_setting">次へ-> </a></p>
