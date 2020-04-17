@@ -114,7 +114,7 @@
 
 7. 保存完了
 
-    次回からは Dashboards の Home や Manage からダッシュボードを参照できる
+    次回からは Dashboards の Home や Manage から保存したダッシュボードを参照できる
     ![image](https://user-images.githubusercontent.com/63433549/79523418-0de9d000-8099-11ea-955b-a234fed68a77.png)
 
 # テンプレートをインポートしてみる
