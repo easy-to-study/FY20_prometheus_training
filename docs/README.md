@@ -27,8 +27,11 @@
 
 ### [Prometheusを触ってみよう](./tutorial/IaaS_building.md)
 
-Prometheusについてなんとな〜くわかったところで、  
-実際に触ってみて理解を深めましょう！
+Prometheusについてなんとな〜くわかったところで作業を通して理解を深めましょう！
+
+- Azure環境にVM作成
+- prometheus/grafana/alertmanagerのインストール
+- アラーティング設定
 
 ## 問い合わせ先
 
