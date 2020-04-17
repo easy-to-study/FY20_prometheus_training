@@ -8,11 +8,11 @@
 
 ## Prometheusのすごみ
 
-- オープンソースなので無料で利用できる
-- 大企業でガンガン採用されている
+- オープンソースで無料、すごい
+- 大企業でガンガン採用されている、すごい
   - [Cookpad and Prometheus - YouTube](https://www.youtube.com/watch?v=Ik1pvqVTC0w)
   - [Yahoo!JAPAN データセンターネットワークでPrometheus活用事例 - YouTube](https://www.youtube.com/watch?v=cCQO6KCvUzA)
-- 書籍がすごい
+- 書籍がわかりやすい、すごい
   - [O'Reilly Japan - 入門 Prometheus](https://www.oreilly.co.jp/books/9784873118772/)
 - Twitterのフォロワー数・伸びがすごい
 
@@ -22,7 +22,7 @@
 | zabbix     | 7000    | 7700    |
 | nagios     | 5000    | 5900    |
 
-- Kubernetesに対応できてすごい
+- [プロダクショングレードのコンテナ管理基盤 - Kubernetes](https://kubernetes.io/ja/)に対応できてすごい
 
 ## 専門用語
 
