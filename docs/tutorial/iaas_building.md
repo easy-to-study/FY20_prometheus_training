@@ -123,7 +123,7 @@ ssh <spring_board_user_name>@<spring_board_URL> // 別途共有
 ## 皆さんのサーバーへ
 ```
 ## アクセスコマンド
-ssh <user_name>@<プライベートIPアドレス> // 別途共有
+ssh <user_name>@<your_private_ip> // 別途共有
 ## パスワード
 <user_password> // 別途共有
 ```
