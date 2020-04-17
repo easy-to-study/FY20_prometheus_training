@@ -1,6 +1,11 @@
 # 現在の Targets を確認
 
-- Web UI より Status → Targets と選択して現在の Targets を確認する
+1. ブラウザから以下のURLにアクセスする
+    ```
+    http://<jump_domain>/<your_private_ip>/prometheus/
+    ```
+
+2. Web UI より Status → Targets と選択して現在の Targets を確認する
 
     デフォルトでは `http://localhost:9090/metrics` エンドポイントが設定されている
     ![image](https://user-images.githubusercontent.com/63433549/79405722-2510bb00-7fd0-11ea-8e1e-004415e7a81e.png)
@@ -77,7 +82,7 @@
         node_filesystem_free_bytes{fstype=~"ext4|xfs"}
         ```
 
-    - 実行イメージ
+    - Sample
 
         ![image](https://user-images.githubusercontent.com/63433549/79417098-10dab700-7fec-11ea-9dc0-8edcf97f9daa.png)
 
