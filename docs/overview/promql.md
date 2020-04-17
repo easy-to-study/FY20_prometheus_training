@@ -6,17 +6,16 @@
 
 - 収集するデータの一覧は [Status] -> [Targets] で確認ができます。
 - `prometheus.yml`で定義している、`scrape_configs`の設定によって決まります。
-
 ![image](https://user-images.githubusercontent.com/24913906/79410082-6dcd7180-7fda-11ea-9535-69f14fcd5ada.png)
 
-`sd`とは`service discovery`の略語で、例では監視対象を別ファイルで定義しています。  
-動的に検出したい場合は、以下公式より環境にあったものを選ぶ形となります。
-[Configuration | Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+「sd」とは`service discovery`の略語です。上記の例では、監視対象を別ファイルで定義しています。  
+動的に検出したい場合は、以下公式より環境にあったものを選ぶ形となります。  
+- [Configuration | Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
 
 ## データの確認
 
-- PrometheusのUIからクエリを実行できます
-- メトリクス名に一部でもヒットするとサジェストで表示されます
+- PrometheusのUIからクエリを実行することができます。
+- メトリクス名に一部でもヒットするとサジェストで表示されます。
 - Executeボタンをクリックすると、[console],[graph]タブからデータを確認できます。
 ![image](https://user-images.githubusercontent.com/24913906/79416016-a9236c80-7fe9-11ea-84db-5712b583a29b.png)
 
@@ -25,7 +24,7 @@
 メトリクス名とラベル（key/valueペア）で構成され、それぞれのラベルは異なる時系列を表します。
 
 - メトリクス名
-  - 名称は通常、メトリクスの機能を表す。
+  - 名称は通常、メトリクスの機能を表します。
   - 例えば、 `node_filesystem_free_bytes`
     - ファイルシステム毎の空きディスク容量を表します。
 
@@ -75,7 +74,15 @@ PrometheusのClientライブラリは4つの主なタイプのメトリクスを
   - グルーピング
     - `max(node_filesystem_free_bytes) by ( mountpoint, fstype)`
 
-チュートリアルで触ってもらうときに色々試してみてください！
+
+## まとめ
+
+独自クエリというところで身構えてしまうところもありますが、
+実際触ってみると直感的にデータを取り扱うことができましたね。
+
+ここまでで紹介しきれていない機能もたくさんありますが、  
+まずはPrometheusの世界感を実際に触れながら学んでください！
+
 
 ---
 
