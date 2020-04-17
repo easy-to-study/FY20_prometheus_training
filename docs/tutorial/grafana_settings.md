@@ -3,7 +3,7 @@
 1. ブラウザから以下のURLにアクセスする
 
     ```
-    http://<jump_domain>/<your_private_ip>/grafana/
+    http://<spring_board_fqdn>/<your_private_ip>/grafana/
     ```
 
 2. Grafana へ最初にアクセスした場合、ログイン画面が表示されるため admin / admin でログインする

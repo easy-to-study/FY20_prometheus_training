@@ -57,7 +57,7 @@ systemctl start prometheus.service
 - ブラウザから以下のURLにアクセスする
 
     ```
-    http://<jump_domain>/<your_private_ip>/prometheus/
+    http://<spring_board_fqdn>/<your_private_ip>/prometheus/
     ```
 
     ![image](https://user-images.githubusercontent.com/63433549/79302922-985ef200-7f28-11ea-9b36-49a0292133c9.png)
@@ -115,7 +115,7 @@ systemctl start grafana-server.service
 - ブラウザから以下のURLにアクセスする
 
     ```
-    http://<jump_domain>/<your_private_ip>/grafana/
+    http://<spring_board_fqdn>/<your_private_ip>/grafana/
     ```
 
     ![image](https://user-images.githubusercontent.com/63433549/79311201-09f26c80-7f38-11ea-81e2-e2fe6028ce2a.png)
@@ -169,7 +169,7 @@ systemctl start alertmanager.service
 - ブラウザから以下のURLにアクセスする
 
     ```
-    http://<jump_domain>/<your_private_ip>/alertmanager/
+    http://<spring_board_fqdn>/<your_private_ip>/alertmanager/
     ```
 
     ![image](https://user-images.githubusercontent.com/63433549/79322134-5b562800-7f47-11ea-8154-36d3aaac0ff8.png)

@@ -2,7 +2,7 @@
 
 1. ブラウザから以下のURLにアクセスする
     ```
-    http://<jump_domain>/<your_private_ip>/prometheus/
+    http://<spring_board_fqdn>/<your_private_ip>/prometheus/
     ```
 
 2. Web UI より Status → Targets と選択して現在の Targets を確認する
