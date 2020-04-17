@@ -3,7 +3,7 @@
 - Web UI より Alerts を選択して、現在のアラートを確認する
 
     デフォルトではアラートが設定されていない
-    ![image](https://user-images.githubusercontent.com/63433549/79405722-2510bb00-7fd0-11ea-8e1e-004415e7a81e.png)
+    ![image](https://user-images.githubusercontent.com/49776559/79524799-61115200-809c-11ea-8474-4d23d37cb5bd.png)
 
 # Alerts を設定する
 
@@ -101,7 +101,7 @@
 
 4. Web UI より Alerts を選択して、現在のアラートを確認する
 
-    ![image](https://user-images.githubusercontent.com/63433549/79409883-f26bc000-7fd9-11ea-9aff-58ebc7f665a2.png)
+    ![image](https://user-images.githubusercontent.com/49776559/79524800-61a9e880-809c-11ea-9cd0-b1334f81b503.png)
 
 
 # メール通知を設定する
@@ -169,10 +169,20 @@
 
 1. Web UI より Alerts を選択して、アラートのステータス変化を確認する
 
-    - 実行イメージ
+    - 異常検知
 
-        ![image](https://user-images.githubusercontent.com/63433549/79417098-10dab700-7fec-11ea-9dc0-8edcf97f9daa.png)
+        ![image](https://user-images.githubusercontent.com/49776559/79524801-62427f00-809c-11ea-893a-efa52fa46fe0.png)
 
+    - alertmanagerへ通知
+
+        ![image](https://user-images.githubusercontent.com/49776559/79524802-62427f00-809c-11ea-93ca-a670a5687815.png)
+
+2. Web UI より Alerts を選択して、アラートのステータス変化を確認する
+
+    - メール通知
+    
+        ![image](https://user-images.githubusercontent.com/49776559/79524805-62db1580-809c-11ea-9b82-729c32fffc93.png)
+        
 # Appendix
 
 [Configuration alerting rules \| Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)
