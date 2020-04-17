@@ -67,7 +67,7 @@
                 severity: critical
               annotations:
                 summary: "Instance {{ $labels.instance }} down"
-                description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes."
+                description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 2 minutes."
         
             - alert: HostHighCpuLoad
               expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
