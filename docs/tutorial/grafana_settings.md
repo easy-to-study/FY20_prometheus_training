@@ -118,7 +118,7 @@
 
     Grafana.com の URL, ID のいずれかを入力するか、json 文字列を入力することでテンプレートを指定できる
 
-    今回は Grafana.com Dashboard の欄に `11952` と入力する。テンプレートは公式ページの Dashboards から検索できる。
+    今回は Grafana.com Dashboard の欄に `11952` と入力する。テンプレートは [公式ページの Dashboards](https://grafana.com/grafana/dashboards?orderBy=name&direction=asc) から検索できる。
     ![image](https://user-images.githubusercontent.com/63433549/79523834-fe1ebb80-8099-11ea-9fec-fb6cc5fe1639.png)
 
 3. インポートするための情報を入力して Import を押下する
