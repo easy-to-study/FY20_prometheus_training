@@ -86,10 +86,19 @@
     今まで手動で実行していた PromQL がダッシュボードで可視化できるようになった
     ![image](https://user-images.githubusercontent.com/63433549/79518754-d543f980-808c-11ea-85ca-429329e6ffc0.png)
 
-4. グラフの種類を変更してみる
+4. パネルの設定例
 
-    Visualization を選択するとグラフの種類を変更できる
-    ![image](https://user-images.githubusercontent.com/63433549/79522442-b21e4780-8096-11ea-8202-2e5ba0253583.png)
+    - Queries で Add Query を押下すると1つのパネルで複数のグラフを表示することもできる
+
+        ![image](https://user-images.githubusercontent.com/63433549/79528841-04b33000-80a6-11ea-93e0-1b67848971c3.png)
+
+    - Visualization からグラフの種類を変更できる
+
+        ![image](https://user-images.githubusercontent.com/63433549/79522442-b21e4780-8096-11ea-8202-2e5ba0253583.png)
+
+    - General からパネルのタイトルを変更できる
+
+        ![image](https://user-images.githubusercontent.com/63433549/79528598-5d35fd80-80a5-11ea-8c5f-8372e8f0d31e.png)
 
 5. パネルの編集が完了したら ← を押下するか Esc を入力するとダッシュボード画面まで戻ることができる
 
@@ -143,7 +152,7 @@
 - 事前に ローカル → 踏み台サーバ → node_exporter を配置したサーバの順番で ssh しておく
 
     ```
-    ssh <jump_user_name>@<jump_private_ip>
+    ssh <jump_user_name>@<jump_public_ip>
     ssh <node_exporter_user_name>@<node_exporter_private_ip>
     sudo -i
     ```
