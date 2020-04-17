@@ -145,6 +145,7 @@
     ```
     ssh <jump_user_name>@<jump_private_ip>
     ssh <node_exporter_user_name>@<node_exporter_private_ip>
+    sudo -i
     ```
 
 - 実際にダッシュボードが変化する様子を確認
@@ -186,6 +187,20 @@
             ```
             ps -ef | grep tail
             kill <PID>
+            ```
+
+    - node_exporter を落としてみる
+
+        1. node_exporter.service を stop する
+
+            ```
+            systemctl stop node_exporter.service
+            ```
+
+        2. デモが終わったら node_exporter.service を start しておく
+
+            ```
+            systemctl start node_exporter.service
             ```
 
 # Appendix
