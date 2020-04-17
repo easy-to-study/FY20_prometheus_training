@@ -140,23 +140,23 @@
 
         ```
         global:
-        smtp_smarthost: 'smtp.sendgrid.net:587'
-        smtp_from: 'alertmanager@tech.softbank.co.jp'
-        smtp_auth_username: '<smtp_auth_username>'
-        smtp_auth_password: '<smtp_auth_password>'
-
-
+          smtp_smarthost: 'smtp.sendgrid.net:587'
+          smtp_from: 'alertmanager@tech.softbank.co.jp'
+          smtp_auth_username: 'apikey'
+          smtp_auth_password: 'SG.R1spG2zSQDWbi4NZwZmVyA.4ZGHswzipG1Gd6OGvO2Hn9w00a22BA1PZCAZCAPfhhc'
+        
+        
         route:
-        receiver: "mail"
-        group_by: ['alertname', 'instance', 'severity']
-        group_wait: 30s
-        group_interval: 5m
-        repeat_interval: 1h
-
+          receiver: "mail"
+          group_by: ['alertname', 'instance', 'severity']
+          group_wait: 30s
+          group_interval: 5m
+          repeat_interval: 1h
+        
         receivers:
-        - name: 'mail'
-        email_configs:
-        - to: '<alias>@tech.softbank.co.jp'
+         - name: 'mail'
+           email_configs:
+           - to: '<送信先メールアドレス>'
         ```
 
 2. alertmanager を再起動
