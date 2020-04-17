@@ -174,7 +174,7 @@
         1. ダミーファイルを作成する (数値は適宜変更すること)
 
             ```
-            fallocate -l 25GiB dummy_file
+            fallocate -l 26GiB dummy_file
             ```
 
         2. デモが終わったらダミーファイルを削除しておく
