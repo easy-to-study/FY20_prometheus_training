@@ -8,6 +8,12 @@
 
 ## Prometheusのすごみ
 
+- オープンソースなので無料で利用できる
+- 大企業でガンガン採用されている
+  - [Cookpad and Prometheus - YouTube](https://www.youtube.com/watch?v=Ik1pvqVTC0w)
+  - [Yahoo!JAPAN データセンターネットワークでPrometheus活用事例 - YouTube](https://www.youtube.com/watch?v=cCQO6KCvUzA)
+- 書籍がすごい
+  - [O'Reilly Japan - 入門 Prometheus](https://www.oreilly.co.jp/books/9784873118772/)
 - Twitterのフォロワー数・伸びがすごい
 
 |            | 2019/06 | 2020/04 |
@@ -16,11 +22,7 @@
 | zabbix     | 7000    | 7700    |
 | nagios     | 5000    | 5900    |
 
-- 大企業でガンガン採用されている
-  - [Cookpad and Prometheus - YouTube](https://www.youtube.com/watch?v=Ik1pvqVTC0w)
-  - [Yahoo!JAPAN データセンターネットワークでPrometheus活用事例 - YouTube](https://www.youtube.com/watch?v=cCQO6KCvUzA)
-
-- オープンソースなので無料で利用できる
+- Kubernetesに対応できてすごい
 
 ## 専門用語
 
