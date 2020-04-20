@@ -25,7 +25,7 @@
 まずはどういったものがあるのかを知りましょう。  
 そして、多くの企業からも注目されているPrometheusについて紹介していきます。
 
-### [Prometheusを触ってみよう](./tutorial/IaaS_building.md)
+### [Prometheusを触ってみよう](./tutorial/iaas_building.md)
 
 Prometheusについてなんとな〜くわかったところで作業を通して理解を深めましょう！
 
