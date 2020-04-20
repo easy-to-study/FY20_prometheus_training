@@ -115,7 +115,7 @@ Subnet01 (20.10.0.0/24)
 ## 踏み台サーバーへ
 ```
 ## アクセスコマンド
-ssh <spring_board_user_name>@<spring_board_URL> // 別途共有
+ssh <spring_board_user_name>@<spring_board_fqdn> // 別途共有
 ## パスワード
 <spring_board_user_password> // 別途共有
 ```

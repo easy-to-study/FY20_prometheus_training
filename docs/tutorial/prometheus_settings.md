@@ -47,7 +47,7 @@
             # scheme defaults to 'http'.
 
             static_configs:
-            - targets: ['<node_exporter_ip>:9100']
+            - targets: ['<node_exporter_private_ip>:9100']
         ```
 
 2. Prometheus を再起動

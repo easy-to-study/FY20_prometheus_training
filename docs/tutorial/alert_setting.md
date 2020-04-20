@@ -3,7 +3,7 @@
 1. ブラウザから以下のURLにアクセスする
 
     ```
-    http://<jump_domain>/<your_private_ip>/prometheus/alerts
+    http://<spring_board_fqdn>/<your_private_ip>/prometheus/alerts
     ```
 
 2. デフォルトではアラートが設定されてないことを確認

@@ -152,7 +152,7 @@
 - 事前に ローカル → 踏み台サーバ → node_exporter を配置したサーバの順番で ssh しておく
 
     ```
-    ssh <jump_user_name>@<jump_public_ip>
+    ssh <spring_board_user_name>@<spring_board_fqdn>
     ssh <node_exporter_user_name>@<node_exporter_private_ip>
     sudo -i
     ```
