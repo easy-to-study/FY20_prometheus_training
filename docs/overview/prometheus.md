@@ -134,4 +134,4 @@ Promehteusについて雰囲気はつかめましたでしょうか？
 
 ---
 
-<p style="text-align:center"> <a href="./monitoring.md"><- 前へ </a> | <a href="../"> Top </a> |<a href="./promql.md">次へ-> </a></p>
+<p style="text-align:center"> <a href="./monitoring"><- 前へ </a> | <a href="../"> Top </a> |<a href="./promql">次へ-> </a></p>
