@@ -68,4 +68,4 @@ Disk使用率が100%の場合、Diskへの書き込みに失敗し処理が終�
 
 ---
 
-<p style="text-align:center"> <- 前へ | <a href="https://easy-to-study.github.io/FY20_prometheus_training/"> Top </a> |<a href="https://easy-to-study.github.io/FY20_prometheus_training/overview/monitoring">次へ-> </a></p>
+<p style="text-align:center"> <- 前へ | <a href="../"> Top  |<a href="./monitoring">次へ-> </a></p>
