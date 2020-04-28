@@ -92,22 +92,10 @@ Prometheus は複数のコンポーネントで構成されています。
 
 ![image](https://user-images.githubusercontent.com/24913906/79300874-f688d680-7f22-11ea-951e-d35b0ba58784.png)
 
-## Prometheusの運用イメージ
-
-1. 監視対象にExporterを導入
-2. クエリを用いてメトリクス取得できているか確認
-3. grafanaダッシュボードの作成
-4. prometheusのconfig設定
-5. alertmanagerのconfig設定
-6. 通知を確認
-
-![image](https://user-images.githubusercontent.com/24913906/79315702-4923bc00-7f3e-11ea-8bf7-10d2cb2ab833.png)
 
 ## まとめ
 
-Promehteusについて雰囲気はつかめましたでしょうか？
-
-エコシステムなアーキテクチャ、時系列データ/クエリを用いた柔軟な監視設定・ダッシュボードや  
+Promehteusはエコシステムなアーキテクチャ、時系列データ/クエリを用いた柔軟な監視設定・ダッシュボードや
 アラート数を抑制できるなど、多くのすばらしい機能があります。  
 
 つづいては、データの取得方法について学んでいきましょう！
