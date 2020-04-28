@@ -25,6 +25,7 @@
 
 - [プロダクショングレードのコンテナ管理基盤 - Kubernetes](https://kubernetes.io/ja/)に対応できてすごい
 - アラートを減らす思想が活気的ですごい
+
 ## 専門用語
 
 | 用語      | 意味                          | 備考                              |
@@ -85,6 +86,8 @@ Prometheus は複数のコンポーネントで構成されています。
     | gce        | Google Cloud Platform向けのディスカバリ |
     | kubernetes | kubernetes向けのディスカバリ            |
 
+    公式リンク: [Configuration_Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+
 ### コンポーネントのまとめ
 
 ![image](https://user-images.githubusercontent.com/24913906/79300874-f688d680-7f22-11ea-951e-d35b0ba58784.png)
@@ -108,10 +111,6 @@ Promehteusについて雰囲気はつかめましたでしょうか？
 アラート数を抑制できるなど、多くのすばらしい機能があります。  
 
 つづいては、データの取得方法について学んでいきましょう！
-
-## Appendix
-
-- 
 
 ---
 
