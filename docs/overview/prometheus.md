@@ -47,8 +47,8 @@ Prometheus は複数のコンポーネントで構成されています。
 ### Prometheus server
 
 - 監視サーバーのプログラム
-- 定期的に全ての exporter をポーリングしてリソース情報を収集する
-- 監視したデータは prometheus 内の DB に保持される
+- 定期的に監視対象サーバー(targets)に対してスクレイピングする
+- 取得したデータは prometheus 内の DB に保持される
 - アラートの計算と発火を行う
 
 ### Exporter
@@ -57,8 +57,7 @@ Prometheus は複数のコンポーネントで構成されています。
 - テキスト形式でリソース情報を公開するWeb API のようなもの
 - 監視対象のリソース毎に exporter が用意されている
   - ない場合、Clientライブラリが提供されている言語であれば比較的簡単に自作することができる
-    - [Exporters and integrations](https://prometheus.io/docs/instrumenting/exporters/)
-    - 提供されている言語：go, python,java,ruby
+    - 対象言語：go, python,java,ruby [Exporters and integrations_Prometheus](https://prometheus.io/docs/instrumenting/exporters/#other-third-party-utilities)
 
 ### Pushgateway
 
