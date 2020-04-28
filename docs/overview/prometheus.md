@@ -2,17 +2,18 @@
 
 ![image](https://user-images.githubusercontent.com/24913906/79299452-0b636b00-7f1f-11ea-8c31-0fe2e93da8f0.png)
 
-サーバのリソース状況やソフトウェアの統計情報といった各種メトリクスを収集して監視を行うモニタリングシステムです。
+サーバのリソース状況などの様々なメトリクスを収集して監視を行うモニタリングシステムです。
 
 ロギングやトレーシングを行うといった多用途のものではなくメトリクス収集に特化しているモニタリングシステムで、人気が高まりつつあるモニタリングシステムです。
 
 ## Prometheusのすごみ
 
-- オープンソースで無料、すごい
-- 大企業でガンガン採用されている、すごい
+- オープンソース(OSS)なので無料で利用できてすごい
+- Golang製のためバイナリを動かすだけで動作してすごい
+- 大企業でガンガン採用されていてすごい
   - [Cookpad and Prometheus - YouTube](https://www.youtube.com/watch?v=Ik1pvqVTC0w)
   - [Yahoo!JAPAN データセンターネットワークでPrometheus活用事例 - YouTube](https://www.youtube.com/watch?v=cCQO6KCvUzA)
-- 書籍がわかりやすい、すごい
+- 書籍がわかりやすくてすごい
   - [O'Reilly Japan - 入門 Prometheus](https://www.oreilly.co.jp/books/9784873118772/)
 - Twitterのフォロワー数・伸びがすごい
 
@@ -23,7 +24,7 @@
 | nagios     | 5000    | 5900    |
 
 - [プロダクショングレードのコンテナ管理基盤 - Kubernetes](https://kubernetes.io/ja/)に対応できてすごい
-
+- アラートを減らす思想が活気的ですごい
 ## 専門用語
 
 | 用語      | 意味                          | 備考                              |
@@ -31,19 +32,6 @@
 | 時系列データ  | 時間的に変化した情報を持つデータ| 気温の遷移や降水状況などの気象観測など、ある一時期の状態を表す |
 | メトリクス   | 基準とすべき尺度や指標の| HTTPリクエストの総数を表す。              |
 | スクレイピング | メトリクスの収集|                     |
-
-## 特徴
-
-- オープンソース(OSS)
-- バイナリを動かすだけで動作する
-  - Golang製のため、言語環境の整備・プラグインが不要
-  - 依存システムがない
-- ホストが増減する前提で設計されている
-  - オートスケーリング、ローリングアップデートによるホスト名・IPアドレスの変更に対応できる
-- 柔軟な可視化
-  - 様々なグラフ化とダッシュボードをサポート
-- アラートを減らす思想
-  - アラートのグルーピング・ミュート機能をサポート
 
 ## アーキテクチャ
 
@@ -68,7 +56,7 @@ Prometheus は複数のコンポーネントで構成されています。
 - テキスト形式でリソース情報を公開するWeb API のようなもの
 - 監視対象のリソース毎に exporter が用意されている
   - ない場合、Clientライブラリが提供されている言語であれば比較的簡単に自作することができる
-    - [Exporters and integrations | Prometheus](https://prometheus.io/docs/instrumenting/exporters/)
+    - [Exporters and integrations](https://prometheus.io/docs/instrumenting/exporters/)
     - 提供されている言語：go, python,java,ruby
 
 ### Pushgateway
@@ -120,6 +108,10 @@ Promehteusについて雰囲気はつかめましたでしょうか？
 アラート数を抑制できるなど、多くのすばらしい機能があります。  
 
 つづいては、データの取得方法について学んでいきましょう！
+
+## Appendix
+
+- 
 
 ---
 
