@@ -27,6 +27,7 @@ mv prometheus-2.17.1.linux-amd64 prometheus-server
 
 2. 以下の内容で保存する
 
+    `<your_private_ip>` には前のページで作成した VM のプライベートIPを設定する
     ```
     [Unit]
     Description=Prometheus - Monitoring system and time series database
@@ -43,6 +44,21 @@ mv prometheus-2.17.1.linux-amd64 prometheus-server
     [Install]
     WantedBy=multi-user.target
     ```
+
+    - vim tips
+      - ノーマルモード
+        - 方向キー または `hjkl` キーを入力することでカーソル移動
+        - `i` キーを入力すると 入力モード へ
+        - `:` を入力すると コマンドラインモード へ
+      - 入力モード
+        - 方向キーでカーソル移動
+        - 文字列の入力、編集
+      - コマンドラインモード
+        - `:wq` と入力すると保存して閉じる
+      - 共通
+        - `Esc` キーを入力すると ノーマルモード へ
+      - Appendix
+        - vim がインストールされている環境であれば `vimtutor ja` コマンドにて基本操作を学習できるため、暇なときにやっておくと〇
 
 ## prometheus.service を有効にして起動
 
@@ -81,6 +97,8 @@ sudo yum install grafana-6.7.2-1.x86_64.rpm
 
 2. root_url, serve_from_sub_path を設定する
 
+    今回変更するのは `;root_url`, `;serve_from_sub_path` から始まる2行
+
     - 変更前
 
         ```
@@ -94,6 +112,7 @@ sudo yum install grafana-6.7.2-1.x86_64.rpm
 
     - 変更後
 
+        `<your_private_ip>` の変更漏れに注意
         ```
         # The full public facing url you use in browser, used for redirects and emails
         # If you use reverse proxy and sub path specify full url (with sub path)
@@ -102,6 +121,15 @@ sudo yum install grafana-6.7.2-1.x86_64.rpm
         # Serve Grafana from subpath specified in `root_url` setting. By default it is set to `false` for compatibility reasons.
         serve_from_sub_path = true
         ```
+
+    - vim tips
+      - ノーマルモード
+        - `/` を入力すると 検索モード へ
+        - `x` を入力すると現在のカーソル位置の1文字を削除する
+        - `$` を入力すると行末へカーソル移動
+        - `a` を入力すると現在のカーソル位置の1つ後ろで 入力モード へ
+      - 検索モード
+        - `/;root_url`, `/;serve_from_sub_path` を入力して Enter キーを押下するとカーソル移動する
 
 ## grafana-server.service を有効にして起動
 
@@ -152,9 +180,13 @@ mv alertmanager-0.20.0.linux-amd64 alertmanager-server
       --web.external-url=http://127.0.0.1/<your_private_ip>/alertmanager/ \
       --web.route-prefix=/ \
 
-      [Install]
-      WantedBy=default.target
-      ```
+    [Install]
+    WantedBy=default.target
+    ```
+
+    - vim tips
+      - コマンドラインモード
+        - 置換する場合は `:%s/<your_private_ip>/<置換後の文字列>/g`
 
 ## alertmanager.service を有効にして起動
 
