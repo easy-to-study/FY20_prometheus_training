@@ -20,13 +20,12 @@
 監視ってよく聞くけど、実際に何をしているのかわからないですよね。  
 なんでやらないといけないのか、など基本的なところから抑えていきましょう！
 
-### [モダンな監視ツール「Prometheus」を知ろう](./overview/monitoring.md)
+### [モダンな監視ツール「Prometheus」を知ろう](./overview/prometheus)
 
-監視ツールといってもたくさんあります。  
-まずはどういったものがあるのかを知りましょう。  
-そして、多くの企業からも注目されているPrometheusについて紹介していきます。
+監視ツールといってもたくさんありますが
+今日は世界的に注目されているPrometheusについて紹介していきます。
 
-### [Prometheusを触ってみよう](./tutorial/iaas_building.md)
+### [Prometheusを触ってみよう](./tutorial/iaas_building)
 
 Prometheusについてなんとな〜くわかったところで作業を通して理解を深めましょう！
 

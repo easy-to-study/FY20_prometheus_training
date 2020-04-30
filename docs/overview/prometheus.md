@@ -2,17 +2,18 @@
 
 ![image](https://user-images.githubusercontent.com/24913906/79299452-0b636b00-7f1f-11ea-8c31-0fe2e93da8f0.png)
 
-サーバのリソース状況やソフトウェアの統計情報といった各種メトリクスを収集して監視を行うモニタリングシステムです。
+サーバのリソース状況などの様々なメトリクスを収集して監視を行うモニタリングシステムです。
 
 ロギングやトレーシングを行うといった多用途のものではなくメトリクス収集に特化しているモニタリングシステムで、人気が高まりつつあるモニタリングシステムです。
 
 ## Prometheusのすごみ
 
-- オープンソースで無料、すごい
-- 大企業でガンガン採用されている、すごい
+- オープンソース(OSS)なので無料で利用できてすごい
+- Golang製のためバイナリを動かすだけで動作してすごい
+- 大企業でガンガン採用されていてすごい
   - [Cookpad and Prometheus - YouTube](https://www.youtube.com/watch?v=Ik1pvqVTC0w)
   - [Yahoo!JAPAN データセンターネットワークでPrometheus活用事例 - YouTube](https://www.youtube.com/watch?v=cCQO6KCvUzA)
-- 書籍がわかりやすい、すごい
+- 書籍がわかりやすくてすごい
   - [O'Reilly Japan - 入門 Prometheus](https://www.oreilly.co.jp/books/9784873118772/)
 - Twitterのフォロワー数・伸びがすごい
 
@@ -23,38 +24,15 @@
 | nagios     | 5000    | 5900    |
 
 - [プロダクショングレードのコンテナ管理基盤 - Kubernetes](https://kubernetes.io/ja/)に対応できてすごい
+- アラートを減らす思想が画期的ですごい
 
 ## 専門用語
 
 | 用語      | 意味                          | 備考                              |
 | ------- | --------------------------- | ------------------------------- |
-| 時系列データ  | 時間的に変化した情報を持つデータのことを言います。 | 気温の遷移や降水状況などの気象観測など、ある一時期の状態を表す |
-| メトリクス   | 基準とすべき尺度や指標のことを言います。        | HTTPリクエストの総数を表します。              |
-| スクレイピング | メトリクスの収集することを言います。          | 収集周期は任意に設定可能                    |
-| インスタンス  | スクレイピングができるエンドポイントのことを指します  | わかりやすくいえば監視対象                   |
-| ジョブ     | 同じ目的を持つインスタンスの集まりのことを指します   | 少しわかりづらいので以下に例を記載します            |
-
-```plain
-例：4つのインスタンスを持つAPIサーバージョブ
-ジョブ： api-server
-    インスタンス1： 1.2.3.4:5670
-    インスタンス2： 1.2.3.4:5671
-    インスタンス3： 5.6.7.8:5670
-    インスタンス4： 5.6.7.8:5671
-```
-
-## 特徴
-
-- オープンソース(OSS)
-- バイナリを動かすだけで動作する
-  - Golang製のため、言語環境の整備・プラグインが不要
-  - 依存システムがない
-- ホストが増減する前提で設計されている
-  - オートスケーリング、ローリングアップデートによるホスト名・IPアドレスの変更に対応できる
-- 柔軟な可視化
-  - 様々なグラフ化とダッシュボードをサポート
-- アラートを減らす思想
-  - アラートのグルーピング・ミュート機能をサポート
+| 時系列データ  | 時間的に変化した情報を持つデータ| 気温の遷移や降水状況などの気象観測など、ある一時期の状態を表す |
+| メトリクス   | 基準とすべき尺度や指標のこと| CPU,Memoryの使用率やHTTPリクエストの総数などを指す              |
+| スクレイピング | HTTPリクエストを用いてメトリクスを取得すること|                     |
 
 ## アーキテクチャ
 
@@ -69,8 +47,8 @@ Prometheus は複数のコンポーネントで構成されています。
 ### Prometheus server
 
 - 監視サーバーのプログラム
-- 定期的に全ての exporter をポーリングしてリソース情報を収集する
-- 監視したデータは prometheus 内の DB に保持される
+- 定期的に監視対象サーバー(targets)に対してスクレイピングする
+- 取得したデータは prometheus 内の DB に保持される
 - アラートの計算と発火を行う
 
 ### Exporter
@@ -79,13 +57,7 @@ Prometheus は複数のコンポーネントで構成されています。
 - テキスト形式でリソース情報を公開するWeb API のようなもの
 - 監視対象のリソース毎に exporter が用意されている
   - ない場合、Clientライブラリが提供されている言語であれば比較的簡単に自作することができる
-    - [Exporters and integrations | Prometheus](https://prometheus.io/docs/instrumenting/exporters/)
-    - 提供されている言語：go, python,java,ruby
-
-### Pushgateway
-
-- 主には一時的なジョブのプッシュに使用されます。
-- このタイプのジョブは存在する期間が短く、PrometheusがPullを行えば消えるかもしれないため、ゲートウェイを使ってプッシュします。
+    - 対象言語：go, python,java,ruby [Exporters and integrations_Prometheus](https://prometheus.io/docs/instrumenting/exporters/#other-third-party-utilities)
 
 ### grafana
 
@@ -95,6 +67,11 @@ Prometheus は複数のコンポーネントで構成されています。
 
 - Prometheus Server からのアラート・イベントを受け取り、定義された通知設定 (例えばE-mail、slack 等) に基づいてアラートを送信します。
 - ミュート・グルーピング機能を用いることでアラート件数を減らすことも可能
+
+### Pushgateway
+
+- 主には一時的なジョブのプッシュに使用されます。
+- このタイプのジョブは存在する期間が短く、PrometheusがPullを行えば消えるかもしれないため、ゲートウェイを使ってプッシュします。
 
 ### Service discovery
 
@@ -108,30 +85,20 @@ Prometheus は複数のコンポーネントで構成されています。
     | gce        | Google Cloud Platform向けのディスカバリ |
     | kubernetes | kubernetes向けのディスカバリ            |
 
+    公式リンク: [Configuration_Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+
 ### コンポーネントのまとめ
 
 ![image](https://user-images.githubusercontent.com/24913906/79300874-f688d680-7f22-11ea-951e-d35b0ba58784.png)
 
-## Prometheusの運用イメージ
-
-1. 監視対象にExporterを導入
-2. クエリを用いてメトリクス取得できているか確認
-3. grafanaダッシュボードの作成
-4. prometheusのconfig設定
-5. alertmanagerのconfig設定
-6. 通知を確認
-
-![image](https://user-images.githubusercontent.com/24913906/79315702-4923bc00-7f3e-11ea-8bf7-10d2cb2ab833.png)
 
 ## まとめ
 
-Promehteusについて雰囲気はつかめましたでしょうか？
-
-エコシステムなアーキテクチャ、時系列データ/クエリを用いた柔軟な監視設定・ダッシュボードや  
+Promehteusはエコシステムなアーキテクチャ、時系列データ/クエリを用いた柔軟な監視設定・ダッシュボードや
 アラート数を抑制できるなど、多くのすばらしい機能があります。  
 
 つづいては、データの取得方法について学んでいきましょう！
 
 ---
 
-<p style="text-align:center"> <a href="./monitoring"><- 前へ </a> | <a href="../"> Top </a> |<a href="./promql">次へ-> </a></p>
+<p style="text-align:center"> <a href="../overview"><- 前へ </a> | <a href="../"> Top </a> |<a href="./promql">次へ-> </a></p>
