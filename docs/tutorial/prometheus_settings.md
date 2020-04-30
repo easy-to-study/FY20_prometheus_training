@@ -18,6 +18,8 @@
     vim /usr/local/src/prometheus/prometheus-server/prometheus.yml
     ```
 
+    今回変更するのは `- targets:` から始まる1行
+
     - 変更前
 
         ```
@@ -36,6 +38,7 @@
 
     - 変更後
 
+        `<node_exporter_private_ip>` と Port: `9100` の変更漏れに注意
         ```
         # A scrape configuration containing exactly one endpoint to scrape:
         # Here it's Prometheus itself.
@@ -49,6 +52,13 @@
             static_configs:
             - targets: ['<node_exporter_private_ip>:9100']
         ```
+
+    - vim tips
+      - ノーマルモード
+        - `w` を入力すると単語単位でカーソル移動
+        - `cw` を入力すると現在のカーソル位置から単語の末尾までを削除してから 入力モード へ
+        - `u` を入力すると Undo
+        - `ctrl + r` を入力すると Redo
 
 2. Prometheus を再起動
 
