@@ -59,11 +59,6 @@ Prometheus は複数のコンポーネントで構成されています。
   - ない場合、Clientライブラリが提供されている言語であれば比較的簡単に自作することができる
     - 対象言語：go, python,java,ruby [Exporters and integrations_Prometheus](https://prometheus.io/docs/instrumenting/exporters/#other-third-party-utilities)
 
-### Pushgateway
-
-- 主には一時的なジョブのプッシュに使用されます。
-- このタイプのジョブは存在する期間が短く、PrometheusがPullを行えば消えるかもしれないため、ゲートウェイを使ってプッシュします。
-
 ### grafana
 
 - ログ・データ可視化のためのツールで、Prometheus で取得したデータをカッコよく可視化する(ダッシュボード)ために利用されます。
@@ -72,6 +67,11 @@ Prometheus は複数のコンポーネントで構成されています。
 
 - Prometheus Server からのアラート・イベントを受け取り、定義された通知設定 (例えばE-mail、slack 等) に基づいてアラートを送信します。
 - ミュート・グルーピング機能を用いることでアラート件数を減らすことも可能
+
+### Pushgateway
+
+- 主には一時的なジョブのプッシュに使用されます。
+- このタイプのジョブは存在する期間が短く、PrometheusがPullを行えば消えるかもしれないため、ゲートウェイを使ってプッシュします。
 
 ### Service discovery
 
