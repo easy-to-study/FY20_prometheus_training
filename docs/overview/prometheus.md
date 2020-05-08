@@ -101,4 +101,4 @@ Promehteusはエコシステムなアーキテクチャ、時系列データ/ク
 
 ---
 
-<p style="text-align:center"> <a href="../overview"><- 前へ </a> | <a href="../"> Top </a> |<a href="./promql">次へ-> </a></p>
+<p style="text-align:center"> <a href="../overview"> <- 前へ </a> | <a href="../"> Top </a> | <a href="./promql"> 次へ-> </a> </p>

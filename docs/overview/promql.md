@@ -38,7 +38,7 @@
 監視対象のメモリ関連のメトリクスを例に確認していきます。
 
 - データを参照する
-  - ラベル指定 
+  - ラベル指定
     - `node_filesystem_free_bytes{device="/dev/sda2"}`
   - 曖昧検索
     - `node_filesystem_free_bytes{device=~"^/.*/sda[0-9]"}`
@@ -66,4 +66,4 @@
 
 ---
 
-<p style="text-align:center"> <a href="./prometheus"><- 前へ </a> | <a href="../"> Top </a> |<a href="../tutorial/iaas_building">次へ-> </a></p>
+<p style="text-align:center"> <a href="./prometheus"> <- 前へ </a> | <a href="../"> Top </a> | <a href="../tutorial/iaas_building"> 次へ-> </a> </p>

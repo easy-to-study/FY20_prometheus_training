@@ -26,7 +26,7 @@
           - static_configs:
             - targets:
               # - alertmanager:9093
-        
+
         # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
         rule_files:
           # - "first_rules.yml"
@@ -42,7 +42,7 @@
           - static_configs:
             - targets:
               - localhost:9093
-        
+
         # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
         rule_files:
           - "alert_rules.yml"
@@ -68,7 +68,7 @@
               annotations:
                 summary: "Instance {{ $labels.instance }} down"
                 description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 2 minutes."
-        
+
             - alert: HostHighCpuLoad
               expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
               for: 2m
@@ -77,7 +77,7 @@
               annotations:
                 summary: "Host high CPU load (instance {{ $labels.instance }})"
                 description: "CPU load is > 80%\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
-        
+
             - alert: HostOutOfMemory
               expr: node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 < 10
               for: 2m
@@ -86,7 +86,7 @@
               annotations:
                 summary: "Host out of memory (instance {{ $labels.instance }})"
                 description: "Node memory is filling up (< 10% left)\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
-        
+
             - alert: HostOutOfDiskSpace
               expr: (node_filesystem_avail_bytes{device="rootfs"}  * 100) / node_filesystem_size_bytes{device="rootfs"} < 10
               for: 2m
@@ -148,15 +148,15 @@
           smtp_from: 'alertmanager@tech.softbank.co.jp'
           smtp_auth_username: '<smtp_auth_username>'
           smtp_auth_password: '<smtp_auth_password>'
-        
-        
+
+
         route:
           receiver: "mail"
           group_by: ['alertname', 'instance', 'severity']
           group_wait: 30s
           group_interval: 5m
           repeat_interval: 1h
-        
+
         receivers:
          - name: 'mail'
            email_configs:
@@ -184,13 +184,13 @@
 2. Outlookを起動して、メールを着信できたことを確認する
 
     - メール通知
-    
+
         ![image](https://user-images.githubusercontent.com/49776559/79524805-62db1580-809c-11ea-9b82-729c32fffc93.png)
-        
+
 # Appendix
 
 [Configuration alerting rules \| Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)
 
 ---
 
-<p style="text-align:center"> <a href="./grafana_settings"><- 前へ </a> | <a href="../"> Top </a> |次へ-> </p>
+<p style="text-align:center"> <a href="./grafana_settings"> <- 前へ </a> | <a href="../"> Top </a> | 次へ-> </p>
