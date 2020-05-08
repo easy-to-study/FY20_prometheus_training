@@ -142,4 +142,4 @@ sudo -i
 
 ---
 
-<p style="text-align:center"> <a href="../overview/promql"> <- 前へ </a> | <a href="../"> Top </a> | <a href="./service_installation"> 次へ-> </a> </p>
+<p style="text-align:center"> <a href="../overview/promql"> &lt; 前へ </a> | <a href="../"> Top </a> | <a href="./service_installation"> 次へ -&gt; </a> </p>

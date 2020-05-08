@@ -67,4 +67,4 @@ Disk使用率が100%の場合、Diskへの書き込みに失敗し処理が終�
 障害が発生するのはどうしようもないこと。障害が発生した際にその原因はどこにあるのか？を探る手段として、CPU,Memory,Traffic利用量などの情報をもとに調査を実施し、再発防止作業を行い同じ障害を２度と起こさないようにする。
 
 ---
-<p style="text-align:center"> <- 前へ | <a href="../"> Top </a> | <a href="./prometheus"> 次へ-> </a> </p>
+<p style="text-align:center"> &lt; 前へ | <a href="../"> Top </a> | <a href="./prometheus"> 次へ -&gt; </a> </p>
