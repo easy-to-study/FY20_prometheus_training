@@ -102,4 +102,4 @@
 
 ---
 
-<p style="text-align:center"> <a href="./service_installation"> &lt; 前へ </a> | <a href="../"> Top </a> | <a href="./grafana_settings"> 次へ -&gt; </a> </p>
+<p style="text-align:center"> <a href="./service_installation"> &lt;- 前へ </a> | <a href="../"> Top </a> | <a href="./grafana_settings"> 次へ -&gt; </a> </p>

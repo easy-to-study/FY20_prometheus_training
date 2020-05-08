@@ -193,4 +193,4 @@
 
 ---
 
-<p style="text-align:center"> <a href="./grafana_settings"> &lt; 前へ </a> | <a href="../"> Top </a> | 次へ -&gt; </p>
+<p style="text-align:center"> <a href="./grafana_settings"> &lt;- 前へ </a> | <a href="../"> Top </a> | 次へ -&gt; </p>

@@ -66,4 +66,4 @@
 
 ---
 
-<p style="text-align:center"> <a href="./prometheus"> &lt; 前へ </a> | <a href="../"> Top </a> | <a href="../tutorial/iaas_building"> 次へ -&gt; </a> </p>
+<p style="text-align:center"> <a href="./prometheus"> &lt;- 前へ </a> | <a href="../"> Top </a> | <a href="../tutorial/iaas_building"> 次へ -&gt; </a> </p>

@@ -208,4 +208,4 @@ systemctl start alertmanager.service
 
 ---
 
-<p style="text-align:center"> <a href="./iaas_building"> &lt; 前へ </a> | <a href="../"> Top </a> | <a href="./prometheus_settings"> 次へ -&gt; </a> </p>
+<p style="text-align:center"> <a href="./iaas_building"> &lt;- 前へ </a> | <a href="../"> Top </a> | <a href="./prometheus_settings"> 次へ -&gt; </a> </p>
