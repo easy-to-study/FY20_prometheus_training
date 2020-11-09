@@ -8,6 +8,9 @@ https://portal.azure.com
 3. 追加を選択
 ![image](https://user-images.githubusercontent.com/49776559/79426184-ba767400-7ffd-11ea-80db-c8bd0057fd8b.png)
 
+4. 仮想マシンを選択
+![image](https://user-images.githubusercontent.com/49776559/98526757-81fdf680-22bd-11eb-81bc-2c54222e148b.png)
+
 # パラメータの指定
 以下の設定値は、確認が必要なパラメータのみ記載しています。  
 記載のない設定値はデフォルト値で問題ありません。
@@ -19,7 +22,7 @@ https://portal.azure.com
 ITSM_TEST - amaekawa
 
 ## リソースグループ
-FY20_NEWEMP_TRAIN
+FY20_NEWEMP_TRAIN_STU01
 ```
 ### インスタンスの詳細
 ```
@@ -88,7 +91,7 @@ Subnet01 (20.10.0.0/24)
 ### 監視
 ```
 ## ブート診断
-オフ
+無効化
 ```
 ### 自動シャットダウン
 ```
