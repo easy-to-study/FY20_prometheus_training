@@ -145,7 +145,7 @@ inhibit_rules:
 ```
 global:
   smtp_smarthost: 'smtp.sendgrid.net:587'
-  smtp_from: 'alertmanager@tech.softbank.co.jp'
+  smtp_from: '<smtp_from>'
   smtp_auth_username: '<smtp_auth_username>'
   smtp_auth_password: '<smtp_auth_password>'
 

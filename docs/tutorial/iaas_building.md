@@ -58,7 +58,7 @@ Basic A1 // フィルターを解除して選択
 なし
 ```
 ### Sample
-![image](https://user-images.githubusercontent.com/49776458/79406677-aec18800-7fd2-11ea-8a63-0a819a191a2d.PNG)
+![image](https://user-images.githubusercontent.com/63433549/116392395-5bc41700-a85b-11eb-9c99-e82493537663.png)
 ## ディスク
 
 ### ディスクのオプション
@@ -76,16 +76,16 @@ Standard HDD
 ### ネットワーク インターフェイス
 ```
 ## 仮想ネットワーク
-FY20-VirtualNetwork
+fy21-virtual-network
 
 ##サブネット
-Subnet01 (20.10.0.0/24)
+subnet01 (20.10.0.0/24)
 
-## NIC ネットワーク セキュリティ グループ
+## パブリック IP
 なし
 ```
 ### Sample
-![image](https://user-images.githubusercontent.com/49776458/79406684-aff2b500-7fd2-11ea-9c86-ff2281228493.png)
+![image](https://user-images.githubusercontent.com/63433549/116392840-e60c7b00-a85b-11eb-8de0-74fadadc9625.png)
 ## 管理
 
 ### 監視
