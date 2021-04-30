@@ -112,7 +112,7 @@ blackbox_exporter を導入したので、実際に Prometheus から外部の�
 
         static_configs:
         - targets: ['<node_exporter_private_ip>:9100']
-      - job_name: 'blackbox'
+      - job_name: 'blackbox-icmp'
         metrics_path: /probe
         params:
           module: [icmp]
