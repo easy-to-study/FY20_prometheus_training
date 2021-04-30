@@ -6,7 +6,7 @@ blackbox_exporter とは
 上記の手法では exporter を導入していないサーバに対して ICMP (ping) による監視や、HTTP 監視はできません。  
 blackbox_exporter は exporter を導入していないサーバの死活監視を実現します。
 
-必ずしも Prometheus と同じサーバに blackbox_exporter を導入する必要はありませんが、この研修では Prometheus と同じサーバに blackbox_exporter を導入する構成としま す。
+必ずしも Prometheus と同じサーバに blackbox_exporter を導入する必要はありませんが、この研修では Prometheus と同じサーバに blackbox_exporter を導入する構成とします。
 
 # 前準備
 
