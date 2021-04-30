@@ -193,4 +193,4 @@ systemctl restart alertmanager.service
 
 ---
 
-<p style="text-align:center"> <a href="./grafana_settings"><- 前へ </a> | <a href="../"> Top </a> |次へ-> </p>
+<p style="text-align:center"> <a href="./grafana_settings"> &lt;- 前へ </a> | <a href="../"> Top </a> | <a href="./blackbox_exporter_settings"> 次へ -&gt; </a> </p>
