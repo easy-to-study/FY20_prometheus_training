@@ -52,7 +52,7 @@ mv pushgateway-1.2.0.linux-amd64 pushgateway-server
 
     [Service]
     Type=simple
-    ExecStart=/root/pushgateway-server/pushgateway \
+    ExecStart=/usr/local/src/prometheus/pushgateway-server/pushgateway \
       --web.external-url=http://127.0.0.1/<your_private_ip>/pushgateway/ \
       --web.route-prefix=/ \
 
