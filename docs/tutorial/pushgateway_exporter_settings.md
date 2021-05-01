@@ -86,7 +86,7 @@ pushgateway を導入したので、実際にメトリクスをpushしてみま�
 
 ## メトリクスのPush
 
-1. 以下のコマンドを実行する
+1. 以下のコマンドを構築環境より実行する
 
     ```
     echo "some_metric 3.14" | curl --data-binary @- http://<spring_board_fqdn>/<your_private_ip>/pushgateway//metrics/job/some_job
@@ -130,10 +130,11 @@ pushgateway を導入したので、実際にメトリクスをpushしてみま�
 
     ![image](https://user-images.githubusercontent.com/24913906/116720460-2ebc6380-aa17-11eb-9743-f74e15788b34.png)
 
-1. メトリクスのPushを複数回行う
+1. メトリクスのPushを構築環境より複数回行う(コマンド発行は時間を空けて実行してください)
 
     ```
     echo "some_metric 2.71" | curl --data-binary @- http://<spring_board_fqdn>/<your_private_ip>/pushgateway//metrics/job/some_job
+
     echo "some_metric 1.41" | curl --data-binary @- http://<spring_board_fqdn>/<your_private_ip>/pushgateway//metrics/job/some_job
     ```
 
