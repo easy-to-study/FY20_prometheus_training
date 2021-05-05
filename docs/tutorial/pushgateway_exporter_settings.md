@@ -149,3 +149,7 @@ pushgateway を導入したので、実際にメトリクスをpushしてみま�
     Graph を選択することで時系列で閲覧できる
 
     ![image](https://user-images.githubusercontent.com/24913906/116721138-f2d5ce00-aa17-11eb-8aa9-b097950a758f.png)
+
+---
+
+<p style="text-align:center"> <a href="./blackbox_exporter_settings"> &lt;- 前へ </a> | <a href="../"> Top </a> | 次へ -&gt; </p>
