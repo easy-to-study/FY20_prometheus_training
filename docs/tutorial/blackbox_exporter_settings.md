@@ -234,4 +234,4 @@ blackbox_exporter を導入したので、実際に Prometheus から外部の�
 
 ---
 
-<p style="text-align:center"> <a href="./alert_setting"> &lt;- 前へ </a> | <a href="../"> Top </a> | 次へ -&gt; </p>
+<p style="text-align:center"> <a href="./alert_setting"> &lt;- 前へ </a> | <a href="../"> Top </a> | <a href="./pushgateway_exporter_settings"> 次へ -&gt; </a> </p>
