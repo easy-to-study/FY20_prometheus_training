@@ -33,7 +33,8 @@ FY20_NEWEMP_TRAIN_STU01
 東日本
 
 ## イメージ
-CentOS-based 8.2 - Gen1 (デフォルトで指定されているものを使用してください)
+CentOS-based 8.2 - Gen1
+// デフォルトで指定されているものを使用してください
 
 ## サイズ
 Basic_A1
