@@ -1,5 +1,5 @@
 # IaaSサーバー構築
-1. AzurePortalにアクセス  
+1. AzurePortalにアクセス
 https://portal.azure.com
 
 2. VirtualMachinesを選択
@@ -12,7 +12,7 @@ https://portal.azure.com
 ![image](https://user-images.githubusercontent.com/49776559/98526757-81fdf680-22bd-11eb-81bc-2c54222e148b.png)
 
 # パラメータの指定
-以下の設定値は、確認が必要なパラメータのみ記載しています。  
+以下の設定値は、確認が必要なパラメータのみ記載しています。
 記載のない設定値はデフォルト値で問題ありません。
 
 ## 基本
@@ -33,10 +33,11 @@ FY20_NEWEMP_TRAIN_STU01
 東日本
 
 ## イメージ
-CentOS-based 7.7
+CentOS-based 8.2 - Gen1 (デフォルトで指定されているものを使用してください)
 
 ## サイズ
-Basic A1 // フィルターを解除して選択
+Basic_A1
+// すべてのサイズを表示をクリックの上、basic と入力し、フィルタリングを行ってください(展開マクロの中にある場合があるので、その場合はクリックして開いてください)
 ```
 ### 管理者アカウント
 ```
@@ -58,7 +59,8 @@ Basic A1 // フィルターを解除して選択
 なし
 ```
 ### Sample
-![image](https://user-images.githubusercontent.com/63433549/116392395-5bc41700-a85b-11eb-9c99-e82493537663.png)
+![image](https://user-images.githubusercontent.com/24913906/117254790-ce4c7c80-ae83-11eb-9610-4a2c7e8cfb40.png)
+
 ## ディスク
 
 ### ディスクのオプション
@@ -119,6 +121,10 @@ subnet01 (20.10.0.0/24)
 ```
 ## アクセスコマンド
 ssh <spring_board_user_name>@<spring_board_fqdn> -p 443 // 別途共有
+
+// 初回ログイン時にyes/noを聞かれた場合には、yesと入力してください
+// パスワードを聞かれたら、別途共有する値を入力してください。なお、入力時の文字列は非表示となります。
+
 ## パスワード
 <spring_board_user_password> // 別途共有
 ```
