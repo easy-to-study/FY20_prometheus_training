@@ -34,7 +34,7 @@ Webページが正常に稼働しているかどうかを監視する”HTTP監�
 
 代表的なエラーとなるHTTPステータスコード一覧
 
-| 400番台		| Message | Detail |
+| 400番台&nbsp;		| Message | Detail |
 | ---- | ---- | ---- |
 | 400 |	Bad Request |	タイプミス等、リクエストにエラーがあります。(URLエンコードが正しくないなど) |
 | 401 |	Unauthorized |	認証に失敗しました。（パスワードを適当に入れてみた時などに発生） |
@@ -43,7 +43,7 @@ Webページが正常に稼働しているかどうかを監視する”HTTP監�
 | 405 |	Method Not Allowed |	許可されていないメソッドタイプのリクエストを受けた。(GETしか受け入れないサイトにPOSTした) |  
   
   
-| 500番台	| Message | Detail |	
+| 500番台&nbsp;&nbsp;&nbsp;	| Message | Detail |	
 | ---- | ---- | ---- |
 | 500 |	Internal Server Error |	CGIスクリプトなどでエラーが出た。 |
 | 502 |	Bad Gateway |	ゲートウェイやProxyとして動作しているサーバがリクエストを実行しようとしたら不正なレスポンスを受け取った。 |
